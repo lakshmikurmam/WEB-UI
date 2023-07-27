@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telenor POC</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+  <div class="contianer">
+    <header>
+      <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Telenor POC</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="container-md" style="margin-top: 40px">
+        <label for="topics">Select Topics:</label>
+        <div class="btn-group">
+          <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside">
+            Topics
+          </button>
+          <ul class="dropdown-menu">
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/DRIVE/E0010/Power_Consumed_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/DRIVE/E0010/Power_Consumed_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0013/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0013/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0307/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0307/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0011/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0011/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0012/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0012/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0287/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0287/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0286/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0286/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0278/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0278/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0277/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0277/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0009/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0009/Total_Power_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0006/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0006/Total_Power_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0007/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0007/Total_Power_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0008/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0008/Total_Power_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0178/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0178/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0686/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0686/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0075/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0075/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KVAR" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KVAR</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0144/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0144/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0112/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0112/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0114/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0114/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0116/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0116/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0150/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0150/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0156/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0156/Scaled_Value</label>
+            </li>
+            <li><label class="dropdown-item"><input type="checkbox" name="type"
+                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0162/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0162/Scaled_Value</label>
+            </li>
+          </ul>
+        </div>
+        <button id="pltvalues" type="button" class="btn btn-success" onclick="plotValues()">Plot</button>
+      </div>
+    </section>
+    <section>
+      <figure class="highcharts-figure">
+        <div id="container"></div>
+        <!-- <p class="highcharts-description">
+          The above plot visualizes the data received from Unified Hosting Service.
+        </p> -->
+      </figure>
+    </section>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="Common.js"></script>
+  <script src="highcharts/highcharts.js"></script>
+  <script src="highcharts/series-label.js"></script>
+  <script src="highcharts/exporting.js"></script>
+  <script src="highcharts/export-data.js"></script>
+  <script src="highcharts/accessibility.js"></script>
+</body>
+
+</html>
