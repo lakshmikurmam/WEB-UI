@@ -51,7 +51,7 @@ class MqttClient {
           this.hcdata.push(val);
         } else {
           var isPresent = false;
-          for (let i = 0; i < this.hcata.length; i++) {
+          for (let i = 0; i < this.hcdata.length; i++) {
             if (this.hcdata[i]["name"] === topic) {
               this.hcdata[i]["data"].push([dateUTC, val.value]);
               isPresent = true;
