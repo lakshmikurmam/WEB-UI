@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const baseURL = "http://10.246.0.10:8083/";
+const baseURL = "http://10.246.0.10:8083/api/timeseriesdata/";
 const header = {
   Authorization:
     "Bearer f44a7c6a-219f-417d-9a1d-f2bafd38ad53:gepc-subs:14d1b530",
