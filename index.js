@@ -3,12 +3,23 @@ const path = require("path");
 const favicon = require("serve-favicon");
 const bodyParser = require("body-parser");
 var mqttclient = require("./mqttclient");
+var restClient = require("./restClient");
 const app = express();
 const port = 3001;
 
 app.use(
   "/css",
   express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
+);
+app.use(
+  "/css",
+  express.static(
+    path.join(__dirname, "node_modules/jquery-ui/dist/themes/base")
+  )
+);
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/jquery-ui/dist"))
 );
 app.use(
   "/js",
@@ -43,8 +54,15 @@ app.post("/topics", function (req, res) {
 
 app.get("/gettopicvalues", function (req, res) {
   var mqttData = mqttClnt.getData();
-  //console.log(mqttData);
+  console.log(mqttData);
   res.send(mqttData);
+});
+
+app.post("/gethistvalues", function (req, res) {
+  var topicDetails = req.body;
+  console.log(topicDetails);
+  var restAPIData = restClient(topicDetails);
+  res.send(restAPIData);
 });
 
 app.listen(port, () => {

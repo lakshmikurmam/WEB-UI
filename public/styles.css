@@ -2,8 +2,15 @@
     margin-left: 50px;
 }
 
+#pltHistvalues {
+    margin-left: 50px;
+}
+
+#fromDateInput , #toDateInput {
+    background-color: #b8c9d4;
+}
+
 .navbar-brand {
-    margin-left: 134px;
     font: 900;
 }
 
