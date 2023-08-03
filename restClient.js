@@ -44,7 +44,7 @@ function getHistoricalValues(req) {
     })
     .then((response) => {
       console.log(response.data);
-      var resData = JSON.parse(response.data);
+      var resData = response.data;
       var dataArr = formattedHistData(resData);
       var data = [{ name: req.topic, data: dataArr }];
       console.log(data);
