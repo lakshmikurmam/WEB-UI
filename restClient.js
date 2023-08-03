@@ -12,7 +12,7 @@ function formattedHistData(resData) {
   var data = [];
   if (resData.length > 0) {
     resData.forEach((e) => {
-      var date = new Date(e.timestamp);
+      var date = new Date(e.timeStamp);
       data.push([
         Date.UTC(
           date.getFullYear(),
@@ -46,7 +46,7 @@ function getHistoricalValues(req) {
       console.log(response.data);
       var resData = response.data;
       var dataArr = formattedHistData(resData);
-      var data = { name: req.topic, data: dataArr };
+      var data = [{ name: req.topic, data: dataArr }];
       console.log(data);
       return data;
     })
