@@ -15,15 +15,16 @@
       <div class="main">
             <header>
                   <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
-                        <div class="container-fluid">
+                        <div class="container text-left">
                               <a class="navbar-brand" href="#">Telenor POC</a>
                         </div>
                   </nav>
             </header>
             <section>
-                  <div class="container-fluid text-left">
-                        <div class="row">
-                              <div class="col-5" style="margin-top: 40px;">
+                  <div class="container text-left">
+                        <h5 style="margin-top: 30px;">Live Data - MQTT: </h5>
+                        <div class="row" style="margin-top: 20px;">
+                              <div class="col">
                                     <label for="topics">Select Topics:</label>
                                     <div class="btn-group">
                                           <button type="button" class="btn btn-info dropdown-toggle"
@@ -114,145 +115,120 @@
                                     <button id="pltvalues" type="button" class="btn btn-success"
                                           onclick="plotValues()">Plot</button>
                               </div>
-                              <div class="col-7" style="margin-top: 40px;">
-                                    <div class="row">
-                                          <div class="col">
-                                                <label for="topics">Select Topics:</label>
-                                                <div class="btn-group">
-                                                      <button type="button" class="btn btn-info dropdown-toggle"
-                                                            data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                                            Topics
-                                                      </button>
-                                                      <ul class="dropdown-menu">
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/DRIVE/E0010/Power_Consumed_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/DRIVE/E0010/Power_Consumed_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0013/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0013/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0307/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0307/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0011/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0011/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0012/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0012/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0287/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0287/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0286/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0286/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0278/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0278/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0277/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0277/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0009/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0009/Total_Power_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0006/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0006/Total_Power_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0007/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0007/Total_Power_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0008/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0008/Total_Power_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0178/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0178/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0686/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0686/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0075/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0075/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KVAR" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KVAR</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0144/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0144/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0112/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0112/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0114/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0114/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0116/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0116/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0150/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0150/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0156/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0156/Scaled_Value</label>
-                                                            </li>
-                                                            <li><label class="dropdown-item"><input type="radio"
-                                                                              name="type"
-                                                                              value="MC/V1/AUT/au1/OSPMS/AANAL/E0162/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0162/Scaled_Value</label>
-                                                            </li>
-                                                      </ul>
-                                                </div>
-                                          </div>
-                                          <div class="col">
-                                                <label for="fromDate" id="fromdate">From Date: </label>
-                                                <input type="text" id="fromDateInput" size="10" readonly>
-                                          </div>
-                                          <div class="col">
-                                                <label for="toDate" id="todate">To Date :</label>
-                                                <input type="text" id="toDateInput" size="10" readonly>
-                                          </div>
-                                          <div class="col">
-                                                <button id="pltHistvalues" type="button" class="btn btn-success"
-                                                      onclick="plotHistValues()">Plot</button>
-                                          </div>
-                                    </div>
-                              </div>
                         </div>
                         <div class="row">
-                              <div class="col-5">
+                              <div class="col">
                                     <figure class="highcharts-figure">
                                           <div id="container"></div>
                                     </figure>
                               </div>
-                              <div class="col-7">
+                        </div>
+                        <h5 style="margin-top: 30px;">Historical Data - RestAPI:</h5>
+                        <div class="row" style="margin-top: 20px;">
+                              <div class="col">
+                                    <label for="topics">Select Topics:</label>
+                                    <div class="btn-group">
+                                          <button type="button" class="btn btn-info dropdown-toggle"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                Topics
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/DRIVE/E0010/Power_Consumed_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/DRIVE/E0010/Power_Consumed_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0013/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0013/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0307/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0307/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0011/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0011/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0012/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0012/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0287/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0287/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0286/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0286/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0278/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0278/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0277/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0277/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0009/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0009/Total_Power_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0006/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0006/Total_Power_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0007/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0007/Total_Power_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0008/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0008/Total_Power_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KW</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0178/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0178/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0686/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0686/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0075/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0075/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KVAR" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/BUS/E0027/Total_Power_KVAR</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0144/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0144/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0112/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0112/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0114/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0114/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0116/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0116/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0150/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0150/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0156/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0156/Scaled_Value</label>
+                                                </li>
+                                                <li><label class="dropdown-item"><input type="radio" name="type"
+                                                                  value="MC/V1/AUT/au1/OSPMS/AANAL/E0162/Scaled_Value" /><span>&nbsp;&nbsp;</span>MC/V1/AUT/au1/OSPMS/AANAL/E0162/Scaled_Value</label>
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
+                              <div class="col">
+                                    <label for="fromDate" id="fromdate">From Date: </label>
+                                    <input type="text" id="fromDateInput" size="10" readonly>
+                              </div>
+                              <div class="col">
+                                    <label for="toDate" id="todate">To Date :</label>
+                                    <input type="text" id="toDateInput" size="10" readonly>
+                              </div>
+                              <div class="col">
+                                    <button id="pltHistvalues" type="button" class="btn btn-success"
+                                          onclick="plotHistValues()">Plot</button>
+                              </div>
+                        </div>
+                        <div class="row">
+                              <div class="col">
                                     <figure class="highcharts-figure">
                                           <div id="containerRestAPI"></div>
                                     </figure>

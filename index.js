@@ -58,11 +58,18 @@ app.get("/gettopicvalues", function (req, res) {
   res.send(mqttData);
 });
 
-app.post("/gethistvalues", function (req, res) {
-  var topicDetails = req.body;
-  console.log(topicDetails);
-  var restAPIData = restClient(topicDetails);
-  res.send(restAPIData);
+app.post("/gethistvalues", async (req, res) => {
+  try {
+    var topicDetails = req.body;
+    console.log(topicDetails);
+    //console.log("called");
+    var restAPIData = await restClient(topicDetails);
+    //console.log("waiting");
+    console.log(restAPIData);
+    res.send(restAPIData);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 app.listen(port, () => {

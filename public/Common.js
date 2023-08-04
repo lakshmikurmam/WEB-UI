@@ -106,7 +106,7 @@ function plotHistValues() {
     $("input:radio[name=type]:checked").each(function () {
       signame = $(this).val();
     });
-    console.log(signame);
+    //console.log(signame);
     var fromDate = document.getElementById("fromDateInput").value;
     var toDate = document.getElementById("toDateInput").value;
     console.log(signame + " " + fromDate + " " + toDate);
@@ -166,7 +166,7 @@ async function getHistValues(topic, fromDate, toDate) {
     }),
   });
   let data = await response.json();
-  //console.log(data);
+  console.log(data);
   lineChart2(data);
 }
 
