@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const baseURL = "http://10.246.0.10:8083/api/timeseriesdata/";
+const baseURL = "http://10.246.0.10:1883/";
 const header = {
   Authorization:
     "Bearer f44a7c6a-219f-417d-9a1d-f2bafd38ad53:gepc-subs:14d1b530",
@@ -12,7 +12,7 @@ function formattedHistData(resData) {
   var data = [];
   if (resData.length > 0) {
     resData.forEach((e) => {
-      var date = new Date(e.timeStamp);
+      var date = new Date(e.timestamp);
       data.push([
         Date.UTC(
           date.getFullYear(),
@@ -44,7 +44,7 @@ function getHistoricalValues(req) {
     })
     .then((response) => {
       console.log(response.data);
-      var resData = response.data;
+      var resData = JSON.parse(response.data);
       var dataArr = formattedHistData(resData);
       var data = [{ name: req.topic, data: dataArr }];
       console.log(data);
